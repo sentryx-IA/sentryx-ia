@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sentryx.ai</title>
+  <title>Sentryx IA</title>
 
   <style>
     * {
@@ -14,142 +14,210 @@
     }
 
     body {
-      background: linear-gradient(135deg, #05070a, #071827, #0b2a45);
-      color: #fff;
+      background: radial-gradient(circle at top, #12324a 0%, #05070a 45%, #020305 100%);
+      color: #ffffff;
       min-height: 100vh;
     }
 
     header {
-      padding: 25px 8%;
+      width: 100%;
+      padding: 28px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .logo {
-      font-size: 26px;
-      font-weight: bold;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 1px;
       color: #9bd8ff;
     }
 
     .logo span {
-      color: #ffffff;
+      color: white;
+    }
+
+    .nav {
+      color: #bcd6e8;
+      font-size: 14px;
     }
 
     .hero {
-      min-height: 80vh;
-      display: flex;
+      padding: 70px 8% 40px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
       align-items: center;
-      justify-content: center;
-      padding: 40px 8%;
-      text-align: center;
+      max-width: 1250px;
+      margin: auto;
     }
 
-    .card {
-      max-width: 900px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(155, 216, 255, 0.25);
-      border-radius: 28px;
-      padding: 60px 40px;
-      box-shadow: 0 0 60px rgba(74, 166, 255, 0.25);
-      backdrop-filter: blur(12px);
-    }
-
-    .badge {
+    .tag {
       display: inline-block;
       padding: 10px 18px;
       border-radius: 999px;
-      background: rgba(155, 216, 255, 0.15);
+      background: rgba(155, 216, 255, 0.12);
       color: #9bd8ff;
-      font-size: 14px;
+      border: 1px solid rgba(155, 216, 255, 0.25);
       margin-bottom: 25px;
-      border: 1px solid rgba(155, 216, 255, 0.3);
+      font-size: 14px;
     }
 
     h1 {
-      font-size: 54px;
-      line-height: 1.1;
-      margin-bottom: 25px;
+      font-size: 62px;
+      line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
     }
 
     h1 span {
       color: #9bd8ff;
+      text-shadow: 0 0 35px rgba(155, 216, 255, 0.45);
     }
 
-    p {
-      font-size: 19px;
-      line-height: 1.6;
-      color: #d7e8f7;
+    .subtitle {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #c9d9e8;
       margin-bottom: 35px;
+      max-width: 650px;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+    .premium-card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(155, 216, 255, 0.22);
+      border-radius: 30px;
+      padding: 35px;
+      box-shadow: 0 0 70px rgba(74, 174, 255, 0.18);
+      backdrop-filter: blur(14px);
     }
 
-    .btn {
-      text-decoration: none;
-      padding: 16px 28px;
-      border-radius: 14px;
-      font-weight: bold;
-      transition: 0.3s;
+    .screen {
+      background: #07111d;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
-    .primary {
-      background: #9bd8ff;
-      color: #06111d;
+    .line {
+      height: 14px;
+      border-radius: 20px;
+      background: rgba(155, 216, 255, 0.18);
+      margin-bottom: 14px;
     }
 
-    .secondary {
-      border: 1px solid #9bd8ff;
-      color: #9bd8ff;
+    .line.big { width: 90%; }
+    .line.medium { width: 70%; }
+    .line.small { width: 45%; }
+
+    .chat {
+      margin-top: 25px;
+      background: rgba(155, 216, 255, 0.12);
+      border-radius: 18px;
+      padding: 18px;
+      color: #dff3ff;
+      font-size: 15px;
+      line-height: 1.5;
     }
 
-    .features {
+    .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 40px 8%;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
       max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 8%;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(155,216,255,0.15);
+      border-radius: 22px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 32px;
+      color: #9bd8ff;
+      margin-bottom: 8px;
+    }
+
+    .stat p {
+      color: #c7d7e5;
+      font-size: 15px;
+    }
+
+    .services {
+      padding: 70px 8%;
+      max-width: 1200px;
       margin: auto;
     }
 
-    .feature {
-      background: rgba(255, 255, 255, 0.07);
-      padding: 28px;
-      border-radius: 20px;
-      border: 1px solid rgba(155, 216, 255, 0.18);
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 15px;
     }
 
-    .feature h3 {
+    .section-desc {
+      text-align: center;
+      color: #bdd0df;
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .service {
+      background: rgba(255,255,255,0.065);
+      border: 1px solid rgba(155,216,255,0.16);
+      border-radius: 24px;
+      padding: 32px;
+    }
+
+    .service h3 {
       color: #9bd8ff;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      font-size: 22px;
     }
 
-    .feature p {
-      font-size: 15px;
-      margin: 0;
+    .service p {
+      color: #c9d9e8;
+      line-height: 1.6;
+      font-size: 16px;
     }
 
     footer {
       text-align: center;
       padding: 35px 20px;
-      color: #b7c7d6;
+      color: #9fb2c2;
       font-size: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
 
-    @media (max-width: 700px) {
-      h1 {
-        font-size: 36px;
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
       }
 
-      .card {
-        padding: 40px 25px;
+      h1 {
+        font-size: 42px;
+      }
+
+      .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -158,41 +226,75 @@
 <body>
 
   <header>
-    <div class="logo">Sentryx<span>IA</span></div>
+    <div class="logo">Sentryx <span>IA</span></div>
+    <div class="nav">CRM • WhatsApp • Automação</div>
   </header>
 
   <section class="hero">
-    <div class="card">
-      <div class="badge">CRM • WhatsApp • Automação • IA</div>
+    <div>
+      <div class="tag">Automação inteligente para empresas</div>
 
-      <h1>Automação inteligente para empresas que querem <span>vender mais</span></h1>
+      <h1>Transforme atendimento em <span>vendas todos os dias</span></h1>
 
-      <p>
-        A Sentryx.ai ajuda empresas a automatizar o atendimento no WhatsApp,
-        organizar clientes e responder leads com mais velocidade, eficiência e profissionalismo.
+      <p class="subtitle">
+        A Sentryx IA automatiza o atendimento no WhatsApp, organiza seus clientes
+        e ajuda sua empresa a responder mais rápido, vender mais e operar com mais eficiência.
       </p>
+    </div>
 
-      <div class="buttons">
-        <a class="btn primary" href="mailto:sentryxia@gmail.com">Entrar em contato</a>
-        <a class="btn secondary" href="#servicos">Ver soluções</a>
+    <div class="premium-card">
+      <div class="screen">
+        <div class="line big"></div>
+        <div class="line medium"></div>
+        <div class="line small"></div>
+
+        <div class="chat">
+          Novo lead recebido pelo WhatsApp.<br>
+          Atendimento iniciado automaticamente.<br>
+          Cliente direcionado para fechamento.
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="features" id="servicos">
-    <div class="feature">
-      <h3>Atendimento 24h</h3>
-      <p>Automatize respostas e não perca oportunidades por demora no WhatsApp.</p>
+  <section class="stats">
+    <div class="stat">
+      <h3>24h</h3>
+      <p>Atendimento ativo todos os dias</p>
     </div>
 
-    <div class="feature">
-      <h3>CRM Organizado</h3>
-      <p>Centralize conversas, clientes e oportunidades em um só lugar.</p>
+    <div class="stat">
+      <h3>+Agilidade</h3>
+      <p>Respostas rápidas para seus leads</p>
     </div>
 
-    <div class="feature">
-      <h3>Mais Vendas</h3>
-      <p>Transforme atendimento em processo comercial com mais controle e velocidade.</p>
+    <div class="stat">
+      <h3>+Vendas</h3>
+      <p>Processos comerciais mais eficientes</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2 class="section-title">Soluções para sua empresa crescer</h2>
+    <p class="section-desc">
+      Tecnologia aplicada para atendimento, organização e conversão.
+    </p>
+
+    <div class="grid">
+      <div class="service">
+        <h3>CRM Inteligente</h3>
+        <p>Organize contatos, conversas e oportunidades em um único sistema.</p>
+      </div>
+
+      <div class="service">
+        <h3>WhatsApp Automatizado</h3>
+        <p>Responda clientes com mais velocidade e não perca vendas.</p>
+      </div>
+
+      <div class="service">
+        <h3>Automação Comercial</h3>
+        <p>Fluxos inteligentes para aumentar produtividade e conversão.</p>
+      </div>
     </div>
   </section>
 
